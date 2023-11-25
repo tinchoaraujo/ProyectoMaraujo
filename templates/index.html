@@ -5,6 +5,20 @@
     <title>Title</title>
 </head>
 <body>
-    <b>Hola Django</b> - Coder
+    <b>Hola {{nombre}} tu tienes {{edad}} </b> - Coder
+<h1>hijos</h1>
+{{hijos}}
+<hr>
+{% for hijo in hijos%}
+Los datos de mi hijo son:
+{% for key, value in hijo.items %}
+{{key}}: {{value}}
+{% endfor %}
+{% endfor %}
+
+<hr>
+{% if edad == 35 %}
+    Esta persona tiene 35 años
+{% endif %}
 </body>
 </html>
